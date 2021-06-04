@@ -1,0 +1,15 @@
+.top {
+    text-align: center;
+    background-color: darkblue;
+    color: darkgray;
+    font-weight: bold;
+    
+}
+
+.top .left{
+    padding: 0% 5%;
+    float: left;
+}
+.top .right{
+    float: right;
+}

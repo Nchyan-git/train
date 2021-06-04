@@ -1,0 +1,47 @@
+.title {
+    text-align: center;
+    background-color: darkblue;
+    color: darkgray;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+
+.index {
+    width: 25%;
+    height: 450px;
+    background-color: powderblue;
+    float: left;
+}
+.content {
+    width: 75%;
+    height: 450px;
+    background-color: white;
+    float: left;
+}
+.content img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.content table{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+.content table th{
+    text-align: center;
+}
+.content table td{
+    text-align: center;
+}
+.content p{
+    text-indent: 2em;
+}
+
+.botton {
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    margin-top: 10px;
+    padding: 20px 0px;
+}
