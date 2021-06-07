@@ -13,6 +13,17 @@
     justify-content: space-around;
     padding: 0% 10%;
 }
+/* #footer content{
+    align-items: center;
+} */
+#footer img{
+    vertical-align: middle;
+}
+
+#footer span{
+    font-size: 25px;
+}
+
 
 .container{
     width: 1200px;
