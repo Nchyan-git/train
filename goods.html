@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .danger {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>商品列表：</h2>
+    <div id="message"></div>
+
+    <ul id="good">
+    </ul>
+
+    <button id="page1">1</button>
+    <button id="page2">2</button>
+    <button id="page3">3</button>
+    <br>
+    <button id="deleteAll">删除所有商品</button>
+
+    <div>
+        <span>名称</span>
+        <input type="text" id="inputMsg">
+        <button id="add">添加</button>
+    </div>
+
+    <script>
+        initFruit(1);//初始化
+        function initFruit(page) 
+        {
+            axios.get("https://www.fastmock.site/mock/d1c04ff6bf0971aafc01cccb0e24c394/train/fruits?page=" + page).then(function (res) {
+                console.log('mock', res.data);
+
+                for (let i = 0; i < res.data.data.product.length; ++i) 
+                {
+                    console.log(res.data.data.product[i]);
+                    $("#good").append("<li>" + res.data.data.product[i].name + "&nbsp&nbsp&nbsp&nbsp" + res.data.data.product[i].price + "</li>");
+                }
+            })
+        }
+
+        $(function () {
+
+            $("#add").click(function () {
+                var inputMsg = $("#inputMsg").val();
+                if (inputMsg == "") {
+                    $("#message").html("请输入水果名称")
+                    $("#message").addClass("danger")
+                    return false;
+                }
+                else {
+                    $("#good").append("<li>" + inputMsg + "</li>")
+                    $("#message").html("添加了水果" + inputMsg)
+                    $("#message").removeClass("danger")
+                    $("#good li").click(function () {
+                        $(this).remove();
+                        $("#message").html("删除了水果" + $(this).text())
+                        $("#message").addClass("danger")
+                    })
+                }
+            })
+
+            $("#good li").click(function () {
+                $(this).remove();
+                $("#message").html("删除了水果" + $(this).text())
+                $("#message").addClass("danger")
+            })
+
+            $("#deleteAll").click(function () {
+                $("#good li").remove();
+                $("#message").html("删除了所有水果")
+                $("#message").addClass("danger")
+            })
+
+            $("#page1").click(function () {
+                $("#good li").remove();
+                initFruit(1) 
+            })
+            $("#page2").click(function () {
+                $("#good li").remove();
+                initFruit(2) 
+            })
+            $("#page3").click(function () {
+                $("#good li").remove();
+                initFruit(3) 
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
