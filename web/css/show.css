@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+}
+
+#top {
+    display: flex;
+    background-color: rgb(216, 216, 216);
+    justify-content: space-around;
+    padding: 2% 10%;
+}
+#guideTitle{
+    text-align: center;
+}
+/* #footer content{
+    align-items: center;
+} */
+#guide img{
+    vertical-align: middle;
+}
+
+#guide span{
+    font-size: 25px;
+}
+
+#item{
+    display: flex;
+    justify-content: space-around;
+}
+
+#item p{
+    width: 450px;
+}
+
+#sight{
+    display: flex;
+    justify-content: space-around;
+}
+
+#sight p{
+    width: 450px;
+}
+
+.container{
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    margin-left: 5px;
+}
+.nav{
+    list-style: none;
+}
+.nav li{
+    float: right;
+    margin-left: 5px;
+}
+.between{
+    justify-content: space-between;
+}
+
+.news{
+    padding: 5px;
+}
+
+.news img{
+    width: 120px;
+    height: 80px;
+}
+
+.news #title{
+    margin: 0px auto;
+    width: 100px;
+    height: auto;
+    font-size: 4px;
+    font-weight: bold;
+}
+.news #txt{
+    margin: 0px auto;
+    width: 100px;
+    font-size: 1px;
+}
+.news #i:hover{
+    border: 1px solid red;
+} 
+
+/* #news hr{
+    width: 50px;
+    border-bottom: 3px solid black;
+}
+#news ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0%;
+}
+#news ul img{
+    width: 65px;
+}
+#news ul li{
+    width: 22%;
+    list-style: none;
+    border: 1px solid darkgrey;
+    padding: 10px;
+    cursor: pointer;
+}
+#news ul li:hover{
+    border: 1px solid red;
+} */
+
+#guide{
+    background-color: rgb(172, 172, 172);
+    color: white;
+    padding: 0% 12%;
+}
+
+#guide hr{
+    width: 50px;
+    border-bottom: 3px solid black;
+}
+#guide ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0%;
+}
+#guide ul img{
+    width: 65px;
+}
+#guide ul li{
+    width: 22%;
+    list-style: none;
+    border: 1px solid darkgrey;
+    padding: 10px;
+    cursor: pointer;
+}
+#guide ul li:hover{
+    border: 1px solid red;
+}

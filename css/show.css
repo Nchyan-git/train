@@ -1,7 +1,6 @@
 #top {
     display: flex;
     background-color: rgb(255, 118, 64);
-    font-weight: bold;
     justify-content: space-around;
     padding: 0% 10%;
 }
@@ -9,7 +8,6 @@
     display: flex;
     background-color: rgb(175, 50, 0);
     color: white;
-    font-weight: bold;
     justify-content: space-around;
     padding: 0% 10%;
 }

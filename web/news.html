@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/show.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="top">
+        <div class="logo between container">
+          <div class="between">
+            <img src="img/logo.png" alt="">
+            <span>拉比多豪斯</span>
+          </div>
+          <ul class="nav">
+            <li><a href="main.html">首页</a></li>
+            <li><a href="news.html">新闻</a></li>
+            <li><a href="about.html">关于我们</a></li>
+          </ul>
+        </div>
+    </div>
+
+    <!-- 列表页 -->
+    <div class="container">
+        <ul class="list">
+            
+        </ul>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li onclick="pre()" class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+            <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+            <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+            <li onclick="next()" class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+
+    
+
+      <div id="footer">
+        <div id="guide" class="container">
+          <div>
+            <ul>
+              <li>
+                <img src="img/icon_date.png" alt="">
+                <h6>日程安排</h6>
+              </li>
+              <li>
+                <img src="img/addr.png" alt="">
+                <h6>地址</h6>
+              </li>
+              <li>
+                <img src="img/user.png" alt="">
+                <h6>人工客服</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <script>
+
+      let curIdx = Number(window.location.href.split("?page=")[1]) || 1;
+
+      function getUrl(page){
+          window.location.href=`?page=${page}`
+      }
+
+      printPage(curIdx)
+
+      function printPage(page){
+        curIdx = page;
+        axios.get("https://www.fastmock.site/mock/d1c04ff6bf0971aafc01cccb0e24c394/train/news?page=" + page).then(function (res) {
+            console.log(res.data);
+            $('.list').empty();
+            for(let i=0;i<res.data.data.list.length;i++){
+                let li = $("<li></li>");
+                li.append(`<img src="${res.data.data.list[i].img}" alt="">`);
+                li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
+                li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`);
+                li.attr('id',res.data.data.list[i].id)
+                $(".list").append(li);
+
+                $('.list li').click(function(){
+                  window.location.href = `detail.html?id=${$(this).attr('id')}`
+                })
+            }
+        })
+
+      }
+      function pre() 
+        {
+            if (curIdx > 1) {
+              getUrl(curIdx - 1);
+            }
+            
+        }
+
+        function next() 
+        {
+            if (curIdx < 3) 
+            {
+              getUrl(curIdx + 1);
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- 元素格式
+<li>
+    <img src="img/k4.png" alt="">
+    <h5 style="font-weight: bold;">没有嘻嘻哈哈</h5>
+    <p style="color:darkgrey; font-size: 10px; margin: auto;">2020-4-9</p>
+    <p style="font-size: 13px;">喂喂喂喂喂喂</p>
+</li> -->
