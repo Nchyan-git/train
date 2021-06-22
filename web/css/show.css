@@ -86,7 +86,7 @@ body{
     width: 100px;
     font-size: 1px;
 }
-.news #i:hover{
+.news .i:hover{
     border: 1px solid red;
 } 
 

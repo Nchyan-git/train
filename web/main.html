@@ -190,11 +190,11 @@ crossorigin="anonymous"></script>
             console.log(res.data);
             for(let i=0;i<4;i++){
                 var li = $("<div id='news'></div>");
-                var item = $("<div id='i'></div>");
+                var item = $("<div class='i'></div>");
                 item.append(`<img src="${res.data.data.list[i].img}" alt="">`);
                 item.append(`<p id="title">${res.data.data.list[i].title}</p>`);
                 item.append(`<p id="txt">${res.data.data.list[i].content}</p>`);
-
+                item.attr('id',res.data.data.list[i].id)
                 item.click(function(){
                   window.location.href = `detail.html?id=${$(this).attr('id')}`
                 })
