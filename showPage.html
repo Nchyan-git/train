@@ -5,44 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/show.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+    <link rel="stylesheet" href="css/show_.css">
+    <style>
+        @media screen and (max-width:800px) {
+            .col {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:800px) {
+            .col {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:1205px) {
+            .col {
+                width: 25%;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .navbars .navbars-box .menu {
+                display: block;
+            }
+
+            #lists {
+                display: none;
+            }
+
+            .list-mobile {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+    </style>
     <title>Document</title>
 </head>
 
 <body>
-    <div id="top">
-        <div class="logo between container">
-            <div class="between">
+    <!-- <div id="top">
+        <div class="between">
+            <div class="logo">
                 <img src="logo.png" alt="">
                 <span>Nchyan的主页</span>
             </div>
-            <ul class="nav">
-                <li><a href="#movieFlag">我的喜好</a></li>
-                <li><a href="#bookFlag">喜欢的书</a></li>
-                <li><a href="#">聊聊</a></li>
+            <div id="hidBtn" class="menu">菜单</div>
+            <ul id="lists" class="navs list list-mobile">
+                <li class="navbars-box"><a href="#movieFlag">我的喜好</a></li>
+                <li class="navbars-box"><a href="#bookF lag">喜欢的书</a></li>
+                <li class="navbars-box"><a href="#">聊聊</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
+    <header id="w_header">
+    <nav id="naaa" class="navbar navbar-expand-lg navbar-light navbar-w">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                <img class="scroll-con-img" data-src="images/longmao.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#w_nav"
+                aria-controls="w_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="w_nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
     <div>
         <div id="content" class="container">
             <div class="movie">
                 <h2 id="movieFlag">喜欢的电影</h2>
                 <hr>
-                <ul>
-                    <li>
-                        <img src="img/1.png" alt="">
+                <ul class="row">
+                    <li class="col">
+                        <img data-src="img/1.png" class="lazyload" alt="">
                         <h4>点兔1</h4>
                     </li>
-                    <li>
-                        <img src="img/2.png" alt="">
+                    <li class="col">
+                        <img data-src="img/2.png" class="lazyload" alt="">
                         <h4>点兔2</h4>
                     </li>
-                    <li>
-                        <img src="img/3.png" alt="">
+                    <li class="col">
+                        <img data-src="img/3.png" class="lazyload" alt="">
                         <h4>点兔3</h4>
                     </li>
-                    <li>
-                        <img src="img/ex.png" alt="">
+                    <li class="col">
+                        <img data-src="img/3.png" class="lazyload" alt="">
                         <h4>点兔番外</h4>
                     </li>
                 </ul>
@@ -50,21 +120,21 @@
             <div class="book">
                 <h2 id="bookFlag">喜欢的书</h2>
                 <hr>
-                <ul>
-                    <li>
-                        <img src="img/6.png" alt="">
+                <ul class="row">
+                    <li class="col">
+                        <img data-src="img/6.png" class="lazyload" alt="">
                         <h4>点兔漫画6</h4>
                     </li>
-                    <li>
-                        <img src="img/7.png" alt="">
+                    <li class="col">
+                        <img data-src="img/7.png" class="lazyload" alt="">
                         <h4>点兔漫画6</h4>
                     </li>
-                    <li>
-                        <img src="img/8.png" alt="">
+                    <li class="col">
+                        <img data-src="img/8.png" class="lazyload" alt="">
                         <h4>点兔漫画8</h4>
                     </li>
-                    <li>
-                        <img src="img/9.png" alt="">
+                    <li class="col">
+                        <img data-src="img/9.png" class="lazyload" alt="">
                         <h4>点兔漫画9</h4>
                     </li>
                 </ul>
@@ -73,12 +143,25 @@
     </div>
     <div id="footer">
         <div id="content" class="container">
-                <span>鲁迅先生说过：“二维码是世界上最伟大的发明。没有了二维码，社会将会退步几年。”</span>
-                <img src="2Dbarcode.png" alt="">
-                <hr>
-                <span>版权声明&copy;极客大叔</span>
+            <span>鲁迅先生说过：“二维码是世界上最伟大的发明。没有了二维码，社会将会退步几年。”</span>
+            <img src="2Dbarcode.png" alt="">
+            <hr>
+            <span>版权声明&copy;极客大叔</span>
         </div>
     </div>
+
+    <script>
+            $("#hidBtn").click(function () {
+                if($('#lists').hasClass('list-mobile')){
+                    $('#lists').removeClass('list-mobile')
+                }
+                else{
+
+                    $('#lists').addClass('list-mobile')
+                }
+            })
+
+    </script>
 </body>
 
 </html>

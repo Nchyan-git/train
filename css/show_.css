@@ -1,0 +1,124 @@
+body{
+    /* overflow: hidden; */
+    margin: 0 auto;
+}
+
+
+
+#top {
+    display: flex;
+    background-color: rgb(255, 118, 64);
+    justify-content: space-around;
+/*     padding: 0% 10%; */
+    width: 100%;
+}
+#footer {
+    display: flex;
+    background-color: rgb(175, 50, 0);
+    color: white;
+    justify-content: space-around;
+/*     padding: 0% 10%; */
+}
+/* #footer content{
+    align-items: center;
+} */
+#footer img{
+    vertical-align: middle;
+}
+
+#footer span{
+    font-size: 25px;
+}
+
+
+.container{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navbars .navbars-box .logo{
+    color: blanchedalmond;
+}
+
+.navbars .navbars-box .menu {
+    display: none;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.menu{
+
+}
+
+.logo{
+    width: 30%;
+}
+
+.logo span{
+    margin-left: 5px;
+}
+.navs{
+    list-style: none;
+}
+.navs li{
+    float: right;
+    margin-left: 5px;
+}
+.between{
+    align-items: center;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 0;
+    justify-content: space-between;
+}
+#content hr{
+    width: 50px;
+    /* border-bottom: 3px solid black; */
+}
+#content ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    padding: 0%;
+}
+#content ul img{
+    width: 250px;
+}
+#content ul li{
+    /* width: 25%; */
+    list-style: none;
+    /* border: 1px solid darkgrey; */
+    /* padding: 10px; */
+    cursor: pointer;
+}
+/* #content ul li:hover{
+    border: 1px solid red;
+} */
+
+#naaa{
+    background-color: rgb(255, 118, 64);
+}
+
+#w_header .navbar-w{
+    border-bottom: 1px solid #e0e0e0;
+}
+#w_header .navbar-w .navbar-brand img{
+    height: 100px;
+    margin-right: 100px;
+}
+#w_header .navbar-w .navbar-nav>li>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    font-size: 30px;
+}
+#w_header .navbar-w .navbar-nav>li>a:hover{
+    border-bottom: 2px solid purple;
+}
