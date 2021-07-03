@@ -10,14 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="css/about.css"> -->
     <title>Document</title>
     <style>
     body,
@@ -47,12 +48,28 @@
         text-align: center;
         
     } */
+        /* html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-    #map{
-        display: flex;
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap
+        }
 
-
-    }
+        .iw_poi_content {
+            font: 12px arial, sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word
+        } */
     </style>
     <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=tGBlhOw3zBgwiYeH3rsL6IniNkzjDe8z"></script>
 </head>
@@ -85,7 +102,7 @@
     </nav>
 </header>
     
-    <div class="container" id="case">
+    <!-- <div class="container" id="case">
         <p style="font-size: 30px;">关于我们</p>
         <div id="map">
             <div style="width: 450px; height: 300px;" id="container"></div>
@@ -111,6 +128,62 @@
     </div>
     
     <div id="footer">
+        <div id="guide" class="container">
+          <div>
+            <ul>
+              <li>
+                <img src="img/icon_date.png" alt="">
+                <h6>日程安排</h6>
+              </li>
+              <li>
+                <img src="img/addr.png" alt="">
+                <h6>地址</h6>
+              </li>
+              <li>
+                <img src="img/user.png" alt="">
+                <h6>人工客服</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+
+
+      <section id="lhh_about">
+
+        <div class="text-center mt-3 mb-3">
+            <h2><strong>关于我们</strong></h2>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 order-2 order-lg-1">
+                    <p class="text-muted">
+                        &nbsp;&nbsp;&nbsp;&nbsp; Rabbit House是智乃一家在小镇经营的餐饮店，也是本作主角之一心爱打工并寄宿的店铺。另一位主要角色理世也在这里兼职打工。
+                            原店主是智乃的爷爷，店中饲养了一只叫提比的安哥拉兔。在本篇故事开始一年前，不知因何原因爷爷的灵魂进入了那只安哥拉兔。之后店面也交给了智乃的父亲香风隆宏，变成兔子的爷爷则作为Rabbit House的吉祥物，继续陪伴智乃父女的生活。
+                            白天的Rabbit House是咖啡厅，向客人供应各式咖啡饮品以及甜品、面包等轻食。而到了夜晚Rabbit House就会变成酒吧。故事中的少女们主要负责咖啡厅形态的服务，酒吧业态则主要由隆宏先生负责经营。
+                        
+                        <br>
+                        <img src="img/logo.png" alt="">
+                        <span>地址：鼓浪屿</span>
+                    <img src="img/logo.png" alt="">
+                    <span>联系方式：18695318264</span>
+                    <img src="img/logo.png" alt="">
+                    <span>e-mail：123456@qiuqiu.com</span>
+                    </p>
+                </div>
+                <div class="col-lg-4 order-1 order-lg-2 " > 
+                    <div id="map" >
+                        <!-- <div style="max-width:870px;height:500px;border:#ccc solid 1px;" id="dituContent"></div> -->
+                        <div style="max-width: 862px; height: 300px; " id="container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer" class="_container">
         <div id="guide" class="container">
           <div>
             <ul>

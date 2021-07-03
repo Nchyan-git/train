@@ -116,7 +116,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
+
     font-size: 30px;
 }
 #w_header .navbar-w .navbar-nav>li>a:hover{
