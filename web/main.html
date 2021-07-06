@@ -14,6 +14,8 @@
   <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+
   <title>Document</title>
 
   <style>
@@ -97,29 +99,29 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="scroll-con-img" data-srcset="
-          img/k1.png 540w,
-          img/k1.png 720w,
-          img/k1.png 900w,
-          img/k1.png 1080w,
+          img/k1_540.png 540w,
+          img/k1_720.png 720w,
+          img/k1_900.png 900w,
+          img/k1_1080.png 1080w,
           img/k1.png
           " data-sizes="auto">
       </div>
       <div class="carousel-item">
         <img class="scroll-con-img" data-srcset="
-          img/ck.png 540w,
-          img/ck.png 720w,
-          img/ck.png 900w,
-          img/ck.png 1080w,
+          img/ck_540.png 540w,
+          img/ck_720.png 720w,
+          img/ck_900.png 900w,
+          img/ck_1080.png 1080w,
           img/ck.png
           " data-sizes="auto">
       </div>
 
       <div class="carousel-item">
         <img class="scroll-con-img" data-srcset="
-          img/cme.png 540w,
-          img/cme.png 720w,
-          img/cme.png 900w,
-          img/cme.png 1080w,
+          img/cme_540.png 540w,
+          img/cme_720.png 720w,
+          img/cme_900.png 900w,
+          img/cme_1080.png 1080w,
           img/cme.png
       " data-sizes="auto">
       </div>
@@ -134,7 +136,17 @@
       </button>
   </section>
 
-
+  <!-- <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img sizes="auto" srcset="lunbo1111.jpg 540w,lunbo111.jpg 670w,lunbo11.jpg 900w,lunbo1.jpg 1200w," class="imgs d-block w-100 img-responsive" alt="..." width="100%">
+    </div>
+    <div class="carousel-item">
+        <img sizes="auto" srcset="lunbo2222.jpg 540w,lunbo222.jpg 670w,lunbo22.jpg 900w,lunbo2.jpg 1200w," class="imgs d-block w-100 img-responsive" alt="..." width="100%">
+    </div>
+    <div class="carousel-item">
+        <img sizes="auto" srcset="lunbo3333.jpg 540w,lunbo333.jpg 670w,lunbo33.jpg 900w,lunbo3.jpg 1200w," class="imgs d-block w-100 img-responsive" alt="..." width="100%">
+    </div>
+</div> -->
 
   <div>
     <h2 id="guideTitle">业务功能</h2>
@@ -142,19 +154,19 @@
       <div>
         <ul>
           <li>
-            <img src="img/addr.png" alt="">
+            <img data-src="img/addr.png" class="lazyload" alt="">
             <h6>店铺地址</h6>
           </li>
           <li>
-            <img src="img/dir.png" alt="">
+            <img data-src="img/dir.png" class="lazyload" alt="">
             <h6>咖啡百科</h6>
           </li>
           <li>
-            <img src="img/user.png" alt="">
+            <img data-src="img/user.png" class="lazyload" alt="">
             <h6>培训教学</h6>
           </li>
           <li>
-            <img id="feedback" src="img/rabbit.png" alt="" href="javascript:">
+            <img id="feedback" data-src="img/rabbit.png" class="lazyload" alt="" href="javascript:">
             <h6>联系店主</h6>
           </li>
         </ul>
@@ -167,7 +179,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <img src="img/kokoa_gai.png" alt="">
+          <img data-src="img/kokoa_gai.png" class="lazyload" alt="">
         </div>
         <div class="col-lg-6">
           <h3>热可可</h3>
@@ -193,12 +205,12 @@
         </p>
       </div>
       <div class="col-lg-6 order-1 order-lg-2">
-        <img id="dialogue" src="img/chino_gai.jpg" alt="">
+        <img id="dialogue" data-src="img/chino_gai.jpg" class="lazyload" alt="">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <img src="img/rize_gai.png" alt="">
+        <img data-src="img/rize_gai.png" class="lazyload" alt="">
       </div>
       <div class="col-lg-6">
         <h3>夏日香气</h3>
@@ -222,12 +234,12 @@
         </p>
       </div>
       <div class="col-lg-6 order-1 order-lg-2">
-        <img src="img/chiya_gai.jpg" alt="">
+        <img data-src="img/chiya_gai.jpg" class="lazyload" alt="">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <img src="img/shyaro_gai.jpg" alt="">
+        <img data-src="img/shyaro_gai.jpg" class="lazyload" alt="">
       </div>
       <div class="col-lg-6">
         <h3>乞力马扎罗咖啡</h3>
@@ -256,15 +268,15 @@
       <div>
         <ul>
           <li>
-            <img src="img/icon_date.png" alt="">
+            <img data-src="img/icon_date.png" class="lazyload" alt="">
             <h6>日程安排</h6>
           </li>
           <li>
-            <img src="img/addr.png" alt="">
+            <img data-src="img/addr.png" class="lazyload" alt="">
             <h6>地址</h6>
           </li>
           <li>
-            <img src="img/user.png" alt="">
+            <img data-src="img/user.png" class="lazyload" alt="">
             <h6>人工客服</h6>
           </li>
         </ul>

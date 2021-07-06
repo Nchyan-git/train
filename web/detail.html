@@ -14,6 +14,8 @@
   <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+
     <title>Document</title>
     <style>
       @media screen and (max-width:690px) {
@@ -97,7 +99,7 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
         var idx = window.location.search.split('=')[1];
         axios.get(`https://www.fastmock.site/mock/d1c04ff6bf0971aafc01cccb0e24c394/train/news`).then(function(res) {
             var main = $('#main');
@@ -108,6 +110,22 @@
             main.append(`<img src="${res.data.data.news[idx].img}" alt="">`);
             main.append(`<p style="font-size: 13px;">${res.data.data.news[idx].mainContent}</p>`);
         })
-    </script>
+    </script> -->
+    <script>
+      var idx = window.location.search.split('=')[1];
+
+      axios.get(`https://www.fastmock.site/mock/d1c04ff6bf0971aafc01cccb0e24c394/train/huoche?id=${idx}`).then(function(res) {
+          console.log(res.data);
+          /*  let title = $(`<h1>${res.data.name}</h1>`);
+           $('#div').append(title); */
+
+          var main = $('#main');
+          let title = $(`<h1>${res.data.data.list[0].title}</h1>`);
+          main.append(title);
+          main.append(`<p style="color:red; font-size: 20px; margin: auto;">${res.data.data.list[0].time}</p>`);
+          main.append(`<img data-src="${res.data.data.list[0].img}" class="lazyload" style="height:30% ; width:60%;" alt="">`);
+          main.append(`<p style="font-size: 28px; text-align:left">${res.data.data.list[0].mainContent}</p>`);
+      })
+  </script>
 </body>
 </html>
